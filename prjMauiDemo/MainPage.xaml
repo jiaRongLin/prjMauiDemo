@@ -3,39 +3,55 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prjMauiDemo.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <StackLayout 
+        VerticalOptions="FillAndExpand"
+        BackgroundColor="Gray"
+        Orientation="Vertical">
+        <StackLayout
+            Orientation="Horizontal"
+            VerticalOptions="StartAndExpand"
+            HeightRequest="300">
+            <Label x:Name="l1"
+                   Text="紅色" 
+                   BackgroundColor="Red" 
+                   FontSize="35" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center" 
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text="藍色" 
+                   x:Name="l2"
+                   BackgroundColor="Blue" 
+                   FontSize="35" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center" 
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text="黃色" 
+                   x:Name="l3"
+                   BackgroundColor="Yellow" 
+                   FontSize="35" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center" 
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text="綠色" 
+                   x:Name="l4"
+                   BackgroundColor="Green" 
+                   FontSize="35" 
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center" 
+                   HorizontalOptions="FillAndExpand"/>
 
-            <Image
-                Source="film_20221220021.jpg"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        </StackLayout>
+        <StackLayout 
+                Orientation="Vertical"
+                VerticalOptions="EndAndExpand"
+                HeightRequest="450"
+                BackgroundColor="#80FFFF">
+            <Label Text="第一行" FontSize="35" VerticalOptions="FillAndExpand" />
+            <Label Text="第二行" FontSize="35" VerticalOptions="FillAndExpand" TextDecorations="Underline" />
+            <Label Text="第三行" FontSize="35" VerticalOptions="FillAndExpand" TextColor="#AD5A5A" VerticalTextAlignment="End"/>
+            <Label Text="第四行" FontSize="35" VerticalOptions="FillAndExpand" />
+        </StackLayout>
+    </StackLayout>
 
-            <Label
-                Text="Hello, Movie!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
 
 </ContentPage>
