@@ -9,7 +9,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage =new NavigationPage( new PgEditor());
+		MainPage =new NavigationPage( new PgCalc());
 
 	}
 }

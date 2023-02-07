@@ -1,3 +1,4 @@
+using Android.Views.InputMethods;
 using prjMauiDemo.Model;
 using System;
 using System.Runtime.ConstrainedExecution;
@@ -6,7 +7,7 @@ namespace prjMauiDemo.View;
 
 public partial class PgEditor : ContentPage
 {
-	int index =0;
+	int index = 0;
 	List<CCustomer> list = new List<CCustomer>();
 	public PgEditor()
 	{
@@ -28,7 +29,8 @@ public partial class PgEditor : ContentPage
 
 	private void btnPrevious_Clicked(object sender, EventArgs e)
 	{
-		index = index > 0 ? index-- : 0;
+		index--;
+		index = index > 0 ? index : 0;
 		txtId.Text = list[index].id.ToString();
 		txtName.Text = list[index].name;
 		txtPhone.Text = list[index].phone;
@@ -38,7 +40,8 @@ public partial class PgEditor : ContentPage
 
 	private void btnNext_Clicked(object sender, EventArgs e)
 	{
-		index = index < list.Count()-1 ? index++ : list.Count()-1;
+		index++; //todo第一次顯示0
+		index = index < list.Count()-1 ? index : list.Count()-1;
 		txtId.Text = list[index].id.ToString();
 		txtName.Text = list[index].name;
 		txtPhone.Text = list[index].phone;
