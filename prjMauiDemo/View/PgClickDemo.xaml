@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prjMauiDemo.View.PgClickDemo"
+             Title="PgClickDemo">
+    <StackLayout>
+        <Label 
+            Text="一元二次方程式範例"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="entryA"
+                   Text=""
+                   FontSize="30"
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text="X2+"
+                   FontSize="30"
+               HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="entryB"
+                   Text=""
+                   FontSize="30"
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text="X +"
+                   FontSize="30"
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="entryC"
+                   Text=""
+                   FontSize="30"
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text=" = 0"
+                   FontSize="30"
+                   HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="StartAndExpand">
+            <Button x:Name="buttonOK"
+                    Text="確定"
+                    FontSize="30"
+                    Clicked="buttonOK_Clicked"/>
+            <Label x:Name="lableAns"
+                   FontSize="25"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

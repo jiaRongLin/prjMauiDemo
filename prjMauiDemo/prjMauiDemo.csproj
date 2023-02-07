@@ -50,6 +50,30 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\film_20221220021.jpg" />
+	  <None Remove="Resources\Images\first.png" />
+	  <None Remove="Resources\Images\last.png" />
+	  <None Remove="Resources\Images\menu.png" />
+	  <None Remove="Resources\Images\next.png" />
+	  <None Remove="Resources\Images\previous.png" />
+	  <None Remove="Resources\Images\query.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\P1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\P2.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\PgCalc.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\PgClickDemo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\PgEditor.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
