@@ -8,6 +8,7 @@ namespace prjMauiDemo.View;
 public partial class PgEditor : ContentPage
 {
 	int index = 0;
+	bool btn = false;
 	List<CCustomer> list = new List<CCustomer>();
 	public PgEditor()
 	{
@@ -25,6 +26,8 @@ public partial class PgEditor : ContentPage
 		txtPhone.Text = list[index].phone;
 		txtAddress.Text = list[index].address;
 		txtEmail.Text = list[index].email;
+
+		btn= true;
 	}
 
 	private void btnPrevious_Clicked(object sender, EventArgs e)
@@ -36,17 +39,22 @@ public partial class PgEditor : ContentPage
 		txtPhone.Text = list[index].phone;
 		txtAddress.Text = list[index].address;
 		txtEmail.Text = list[index].email;
+
+		btn= true;
 	}
 
 	private void btnNext_Clicked(object sender, EventArgs e)
 	{
-		index++; //todo第一次顯示0
+		if (btn) { index++; }
+		 //todo第一次顯示0
 		index = index < list.Count()-1 ? index : list.Count()-1;
 		txtId.Text = list[index].id.ToString();
 		txtName.Text = list[index].name;
 		txtPhone.Text = list[index].phone;
 		txtAddress.Text = list[index].address;
 		txtEmail.Text = list[index].email;
+
+		btn = true;
 	}
 
 	private void btnLast_Clicked(object sender, EventArgs e)
@@ -58,6 +66,8 @@ public partial class PgEditor : ContentPage
 		txtPhone.Text = list[index].phone;
 		txtAddress.Text = list[index].address;
 		txtEmail.Text = list[index].email;
+
+		btn = true;
 	}
 
 	private void btnQuery_Clicked(object sender, EventArgs e)
