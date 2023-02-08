@@ -9,12 +9,19 @@
             VerticalOptions="Center" 
             FontSize="30"
             HorizontalOptions="Center" />
+        <Label x:Name="labeldetial"
+               Text=""
+               FontSize="40"
+               TextColor="#BEBEBE"
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="End"
+               HeightRequest="100"/>
         <Label x:Name="labelans"
                Text="0"
                FontSize="60"
                HorizontalTextAlignment="End"
                VerticalTextAlignment="End"
-               HeightRequest="200"/>
+               HeightRequest="100"/>
         <Grid VerticalOptions="FillAndExpand" >
             <Grid.RowDefinitions>
                 <RowDefinition/>

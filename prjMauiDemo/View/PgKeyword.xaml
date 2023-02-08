@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prjMauiDemo.View.PgKeyword"
+             Title="PgKeyword">
+    <VerticalStackLayout>
+        <Label 
+            Text="查詢範例!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="60"/>
+        <Label 
+            Text="查詢關鍵字"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="35"/>
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="entryKeyword"
+                   FontSize="25"
+                   HorizontalOptions="FillAndExpand"/>
+            <ImageButton Source="query.png"
+                         BackgroundColor="#00000000"
+                         HorizontalOptions="EndAndExpand"
+                         Clicked="BtnSearch_click"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

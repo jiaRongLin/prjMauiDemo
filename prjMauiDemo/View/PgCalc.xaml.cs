@@ -18,6 +18,7 @@ public partial class PgCalc : ContentPage
 		if (op == "=") 
 		{
 			labelans.Text = "0";
+			labeldetial.Text = String.Empty;
 			n3 = 0;
 			op = string.Empty;
 		}
@@ -28,8 +29,10 @@ public partial class PgCalc : ContentPage
 		else
 			labelans.Text += b.Text;
 
+		labeldetial.Text += op + b.Text;
 
-		int n1 = int.Parse(labelans.Text);
+		//這樣就可以連加
+		n1 = int.Parse(labelans.Text);
 		if (op == "+")
 			n3 = (n2 + n1);
 		else if (op == "-")
