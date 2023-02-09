@@ -1,4 +1,5 @@
 ﻿using prjMauiDemo.Model;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,19 +9,20 @@ using System.Threading.Tasks;
 
 namespace prjMauiDemo.ViewModel
 {
-	public class CCustomerViewModel:INotifyPropertyChanged
+	public class CCustomerViewModel:INotifyPropertyChanged  //使用內建Interface
 	{
+
 		List<CCustomer> _list = new List<CCustomer>();
 		int index = 0;
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
+		
+		public event PropertyChangedEventHandler PropertyChanged; //實作Interface裡的delegate
+		//不是事件 是為了callback
 		public CCustomerViewModel()
 		{
 			LoadData();
 		}
 
-		public void LoadData()
+		private void LoadData()
 		{
 			_list.Add(new CCustomer() { id = 1, name = "Jia", phone = "0909215565", address = "Kaohsiung", email = "jialin@gmail.com" });
 			_list.Add(new CCustomer() { id = 3, name = "Verna", phone = "0985123654", address = "Tainan", email = "verna@gmail.com" });
@@ -56,7 +58,7 @@ namespace prjMauiDemo.ViewModel
 			PropertyChanged(this, new PropertyChangedEventArgs("current"));
 		}
 
-		public CCustomer QueryByKeyword(string keyword)
+		public CCustomer QueryByKeyword(string keyword)  //關鍵字查找
 		{
 			int count = 0;
 			foreach(var item in _list)

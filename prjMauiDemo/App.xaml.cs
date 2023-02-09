@@ -9,12 +9,15 @@ public partial class App : Application
 	public string Keyword { get; set; }
 	public int selectCustomerIndex { get; set; }
 
+	public List<CToDoItem> todo { get; set; }
+	public int selectTodoIndex { get; set; }
+
 	public List<CCustomer> list {get;set;}
 	public App()
 	{
 		InitializeComponent();
 
-		MainPage =new NavigationPage( new PgEditor());
+		MainPage =new NavigationPage( new PgHttpDemo());
 
 	}
 }

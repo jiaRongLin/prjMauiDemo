@@ -7,7 +7,7 @@ namespace prjMauiDemo.View;
 
 public partial class PgEditor : ContentPage
 {
-	CCustomerViewModel vm = null;
+	CCustomerViewModel vm ;
 	public PgEditor()
 	{
 		InitializeComponent();
